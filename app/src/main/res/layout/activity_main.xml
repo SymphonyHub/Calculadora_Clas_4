@@ -1,0 +1,106 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Layout principal vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Resultado de la operación -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="32sp" />
+
+        <!-- Campo de entrada del usuario -->
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe la operación"
+            android:inputType="textVisiblePassword" />
+
+        <!-- Botones organizados en GridLayout -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="3"
+            android:columnCount="3"
+            android:layout_marginTop="16dp">
+
+            <!-- Primera fila de botones -->
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnSum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnSubtract"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1" />
+
+            <!-- Segunda fila de botones -->
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="="
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1" />
+
+            <!-- Tercera fila de botones -->
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ver Historial"
+                android:layout_columnWeight="3"
+                android:layout_rowWeight="1"
+                android:layout_columnSpan="3" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
